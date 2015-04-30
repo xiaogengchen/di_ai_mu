@@ -15,7 +15,14 @@
 '''
 
 if __name__ == "__main__" :
-    temp_num = ""
-    for row in range(1,10) :
-        temp_num += str(row)
-        print temp_num + " * + 8 + " + str(row) + " = " + str(int(temp_num)*8+row) 
+    num = 1
+    while num < 10 :
+        mynum = ""
+        i = 1
+        while i <= num :
+            mynum += str(i)
+            i += 1
+        print mynum + " * 8 + " + str(num) + " = " + str(int(mynum)*8+num)
+        num += 1
+        print
+        

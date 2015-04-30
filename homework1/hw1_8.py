@@ -3,16 +3,6 @@
 
 '''
 8、只能⽤用while和print语句输出下⾯面的图样
-*
-* * *
-* * * * *
-* * * * * * *
-* * * * * * * * *
-* * * * * * *
-* * * * *
-* * *
-*
-
         *
       * * *
     * * * * *
@@ -25,33 +15,25 @@
 '''
 
 if __name__ == "__main__" :
-    print "图形一:"
     row = 1
-    n = 2
     while row < 10 :
         if row < 6 :
-            print "*"*(2*row-1)
-        elif row > 6 :
-            print "*"*(row-n)
-            n += 3
+            i = 1
+            j = row
+            while j < 5 :
+                print " ",
+                j += 1
+            while i <= 2*row-1 :
+                print "*",
+                i += 1
         else :
-            print "*"*(row+1)
-        row += 1
-
-    print "图形二:"
-    row = 1
-    n = 2
-    space = 4
-    while row < 10 :
-        if row < 6 :
-            print " "*space+"*"*(2*row-1)
-            space -= 1
-        elif row > 6 :
-            print " "*space+"*"*(row-n)
-            space += 1
-            n += 3
-        else :
-            space = 1
-            print " "*space+"*"*(row+1)
-            space += 1
-        row += 1
+             i = 1
+             j = 5
+             while j < row :
+                 print " ",
+                 j += 1
+             while i <= 19-2*row :
+                 print "*",
+                 i += 1
+        row += 1    
+        print

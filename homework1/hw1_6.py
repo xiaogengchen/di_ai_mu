@@ -14,16 +14,21 @@
 
 if __name__ == "__main__" :
     while True :
-        NUM = raw_input("请输入一个数字：")
-        if not NUM.isdigit() :
+        rows = raw_input("请输入一个数字：")
+        if not rows.isdigit() :
             continue
-        NUM = int(NUM)
+        rows = int(rows)
         break
-    for num in range(1,NUM+1):
-        temp_NUM = num
-        while temp_NUM > 1 :
-            print temp_NUM,
-            temp_NUM -= 1
-        for i in range(1,num+1):
-            print i,
+    row = 1
+    while row <= rows :
+        col = row
+        while col >= 1 :
+            print col,
+            col -= 1
+        col += 2
+        while col <= row :
+            print col,
+            col += 1
+        row += 1
         print
+            
