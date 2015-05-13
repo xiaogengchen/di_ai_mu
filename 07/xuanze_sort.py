@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-#-*-coding:utf-8-*-
+# !/usr/bin/env python
+# -*-coding:utf-8-*-
 
 '''
 选择法对列表[7,9,3,11,45,23,12,87,234,11,5,93]进行排序
@@ -11,17 +11,18 @@
     第N-1次。
 '''
 
+
 def xuanze(myList=[]):
     for times in range(len(myList)):
-        print '-'*times,myList
-        for index in range(times+1,len(myList)):
-            print '>'*(index+times),myList
+        print '-'*times, myList
+        for index in range(times+1, len(myList)):
+            print '>'*(index+times), myList
             if myList[times] > myList[index]:
-                myList[times],myList[index] = myList[index],myList[times]
+                myList[times], myList[index] = myList[index], myList[times]
     return myList
 
 if __name__ == "__main__":
-    myList = [7,9,3,11,45,23,12,87,234,11,5,93]
-    print u"选择排序前:",myList
+    myList = [7, 9, 3, 11, 45, 23, 12, 87, 234, 11, 5, 93]
+    print u"选择排序前:", myList
     myList = xuanze(myList)
-    print u"选择排序后:",myList
+    print u"选择排序后:", myList
