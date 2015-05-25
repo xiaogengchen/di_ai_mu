@@ -19,13 +19,15 @@
 '''
 
 
-def tr(srcstr, dststr, string):
-    pass
-        
-    
-            
-    
-    
-
+def tr(srcstr, dststr, string, ignorecase=True):
+    myStr = u""
+    if ignorecase:
+        srcstr = srcstr.lower()
+        myStr = string.replace(srcstr, dststr)
+    else:
+        myStr = string.replace(srcstr, dststr)
+    return myStr
 if __name__ == "__main__":
-    tr('abc', 'mno', 'abcdef')
+    print tr('abc', 'mno', 'abcdef')
+    print tr('ABC', 'mno', 'abcdef')
+    print tr('abcdef', 'mno', 'abcdefghi')
